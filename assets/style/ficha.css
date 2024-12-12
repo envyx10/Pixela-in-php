@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:wght@400;900&display=swap");
+
+* {
+  font-size: 19px;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #ffffff;
+  background-color: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.title {
+  font-size: 80px;
+  color: #ec1b69;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  font-weight: 900;
+  text-align: left;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.rating {
+  margin-bottom: 10px;
+}
+
+.content {
+  flex: 1;
+  max-width: 600px;
+  margin-right: 20px;
+}
+
+.image {
+  flex-shrink: 0;
+  position: sticky;
+  top: 20px;
+  height: auto;
+}
+
+.image img {
+  border-radius: 52px;
+  height: 94vh; 
+  object-fit: cover;
+  box-shadow: 90px -1000px 4068px 281px #ec1b69cc;
+}
+
+.btn {
+  background-color: #ec1b69;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 20px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.btn:hover {
+  color: #111111;
+  background-color: #ffffff;
+}
+
+.btn2 {
+  display: inline-block;
+  height: 29px;
+  background-color: #ec1b69;
+  color: #ffffff;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 11px;
+  margin-top: 10px;
+}
+
+::selection {
+  background-color: #ec1b69;
+  color: #ffffff;
+}
+
+.actors-list {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.actor {
+  text-align: center;
+  width: 150px;
+}
+
+.actor img {
+  width: 150px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out; 
+}
+
+.actor img:hover {
+  animation-delay: 4ms;
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.actor p {
+  text-align: start;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.actor span {
+  color: #ec1b69;
+}
+
+.actors h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Reseñas */
+.reseñas, .reseñas hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.reseñas img {
+  margin-top: 50px;
+  margin-left: 254px;
+  width: 50px;
+}
+
+.reseñas h2 {
+  font-size: 40px;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  font-weight: 900;
+  text-align: left;
+}
+
+.text-reseñas h6 {
+  color: #ec1b69;
+}
+/* Ajustes para texto y scroll */
+.text-reseñas {
+  position: relative;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden; 
+  padding: 9px 18px 0 33px;
+  background-clip: content-box, padding-box;
+  background-size: 100% 50px, 100% 100%;
+  background-origin: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Estilo de la barra de desplazamiento */
+.text-reseñas::-webkit-scrollbar {
+  width: 10px;
+}
+
+.text-reseñas::-webkit-scrollbar-thumb {
+  background: #ff007f;
+  border-radius: 10px;
+}
+
+.text-reseñas::-webkit-scrollbar-track {
+  background: #181818;
+}
+
+/* Estilo para el título de las reseñas */
+.text-reseñas h3 {
+  color: #ec1b69;  
+  font-size: 1.3rem;
+  margin-top: 30px; 
+  margin-bottom: 5px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+}
+
+
+.text-reseñas p strong {
+  color: #ec1b69;   
+}
+
+
+.text-reseñas p {
+  margin-bottom: 15px;
+}
+
+.text-reseñas div form button {
+  text-align: center;
+  width: 100%;
+  background-color: #ec1b69;
+  color: #ffffff;
+  text-decoration: none;  
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  margin: 15px 0 0 -1px; 
+  border: none;           
+  cursor: pointer;        
+}
+
+.text-reseñas div form button:hover {
+  background-color: #ffffff;
+  color: #111111;
+}
+

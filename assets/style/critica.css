@@ -1,0 +1,263 @@
+/* Importación de fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:wght@400;900&display=swap");
+
+/* Ajuste de box-sizing */
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-image: url(../svg/critica/reseña_bg.svg);
+  background-size: cover;
+  background-position: center 10%;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+/* Botón de retroceso */
+.arrow {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  cursor: pointer;
+  width: 76px;
+  height: 76px;
+}
+
+.arrow svg {
+  display: block;
+  fill: none;
+  stroke: #ec1b69;
+  stroke-width: 5;
+}
+
+.arrow svg path {
+  fill: none;
+}
+
+/* Encabezado */
+.header {
+  position: relative;
+  z-index: 1;
+}
+
+.header h1 {
+  font-family: "Outfit", serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 128px;
+  color: #ff007f;
+  margin-bottom: 20px;
+  position: relative;
+  margin-left: 316px;
+  top: 219px;
+}
+
+/* Contenedor del formulario */
+.review-container {
+  position: relative;
+  padding: 52px;
+  text-align: center;
+  background-color: #111;
+  border-radius: 49px;
+  background-image: linear-gradient(245deg, #181818 14%, #111 71%);
+}
+
+/* Formulario */
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Estrellas de calificación */
+.rating {
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+}
+
+.stars input[type="radio"] {
+  display: none;
+}
+
+.stars label {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #181818;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.stars input[type="radio"]:checked ~ label {
+  background-color: #ec1b69;
+}
+
+
+.stars label:hover,
+.stars label:hover ~ label {
+  background-color: #ec1b69;
+}
+
+
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-group label {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.input-group input,
+.input-group textarea {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #222;
+  border: 1px solid #333;
+  border-radius: 19px;
+  padding: 20px;
+  color: #fff;
+  width: 100%;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border: 2px solid #f50057;
+}
+
+.input-group textarea {
+  resize: none;
+  height: 100px;
+}
+
+
+.char-count {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+
+button {
+  height: 50px;
+  width: 50%;
+  background-color: #181818;
+  border: none;
+  border-radius: 49px;
+  color: #ffffff7a;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e60073;
+}
+
+
+@media (max-width: 1920px) {
+  .header h1 {
+    font-size: 128px;
+    margin-left: 314px;
+    top: 193px;
+  }
+
+  .review-container {
+    margin: 325px auto;
+    max-width: 1266px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .header h1 {
+    font-size: 72px;
+    margin-left: 100px;
+    top: 100px;
+  }
+
+  .review-container {
+    margin: 300px auto;
+    max-width: 1000px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header h1 {
+    font-size: 56px;
+    margin-left: 50px;
+    top: 80px;
+  }
+
+  .review-container {
+    margin: 250px auto;
+    max-width: 800px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 48px;
+    margin-left: 20px;
+    top: 60px;
+  }
+
+  .review-container {
+    margin: 200px auto;
+    max-width: 600px;
+    width: 90%;
+  }
+
+  .stars label {
+    width: 32px;
+    height: 32px;
+  }
+
+  button {
+    width: 80%;
+  }
+}

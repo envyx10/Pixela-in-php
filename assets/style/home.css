@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:wght@400;900&display=swap");
+
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px;
+  background-color: rgba(17, 17, 17, 0.6); 
+  z-index: 1000; 
+}
+
+
+.logo {
+  flex: 1; 
+}
+
+.logo h1 {
+  padding-left: 26px;
+  font-size: 45px;
+  color: #ff007f;
+}
+
+nav {
+  flex: 2; 
+  display: flex;
+  justify-content: center; 
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  position: relative; 
+}
+
+.menu li a {
+  font-family: "Outfit", serif;
+  font-weight: 400;
+  font-style: medium;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px; 
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #ff007f; 
+}
+
+.menu li::after {
+  content: ""; 
+  position: absolute;
+  bottom: -5px; 
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff007f; 
+  transition: width 0.3s ease;
+}
+
+.menu li:hover::after {
+  width: 100%; 
+}
+
+
+.session {
+  flex: 1; 
+  display: flex;
+  justify-content: flex-end;
+}
+
+.session a {
+  font-family: "Outfit", serif;
+  font-weight: 400;
+  font-style: medium;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px; 
+  position: relative; 
+  transition: color 0.3s ease;
+}
+
+.session a:hover {
+  color: #ff007f; 
+}
+
+.session a::after {
+  content: ""; 
+  position: absolute;
+  bottom: -5px; 
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff007f; 
+  transition: width 0.3s ease;
+}
+
+.session a:hover::after {
+  width: 100%; 
+}
+
+
+#shogun {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 95px); 
+  overflow: hidden;
+}
+
+#shogun .shogun-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) brightness(70%); 
+}
+
+/* Hero / texto */
+.shogun-text {
+  position: absolute;
+  bottom: 32%;
+  right: 23%;
+  text-align: left;
+  color: #fff;
+}
+
+.shogun-text h2 {
+  font-size: 48px;
+  color: #ff007f;
+}
+
+.shogun-text p {
+  font-size: 18px;
+  max-width: 400px;
+}
+
+.shogun-text hr {
+  margin-top: 10px;
+  width: 90%;
+}
+
+.shogun-text button {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #181818;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 49px;
+  transition: background-color 0.3s ease;
+  text-align: left;
+}
+
+.shogun-text button:hover {
+  background-color: #e6006f; 
+}
+
+.shogun-text button svg {
+  width: 20px; 
+  height: 20px;
+  fill: none;
+  stroke: white; 
+}
+
+#series-destacadas {
+  position: relative;
+  background-image: url(../img/Tendencias.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 116vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Título de la sección */
+#series-destacadas h2 {
+  position: absolute;
+  top: 159px; 
+  left: 34%; 
+  transform: translateX(-50%); 
+  font-size: 128px;
+  color: #ec1b69;
+  margin: 0; 
+  font-family: "Outfit", sans-serif;
+  font-weight: 900;
+  text-align: center;
+}
+
+
+.carousel {
+  /* box-shadow: 90px -1088px 2068px 281px #ec1b69cc; */
+  position: absolute;
+  top: calc(167px + 128px + 20px); 
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 50px; 
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+}
+
+
+.carousel-item img {
+  display: block;
+  height: 450px; 
+  transition: transform 0.7s ease, filter 0.6s ease;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.05); 
+  filter: grayscale(0%) brightness(100%); 
+}
+
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.3); 
+  border: none; 
+  border-radius: 50%; 
+  padding: 10px; 
+  cursor: pointer; 
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  z-index: 10; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px; 
+}
+
+.carousel-control svg {
+  width: 60px; 
+  height: 60px;
+}
+
+.carousel-control.prev {
+  left: 10px; 
+}
+
+.carousel-control.next {
+  right: 10px; 
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.5); 
+}
