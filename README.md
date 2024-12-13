@@ -1,6 +1,6 @@
 # Pixela.io
 
-Pixela.io es una plataforma interactiva que permite a los usuarios explorar series y películas populares, agregar reseñas, puntuarlas y administrar su experiencia personal. El proyecto está desarrollado en PHP y utiliza una base de datos para gestionar usuarios, series y reseñas.
+Pixela.io es una plataforma interactiva que permite a los usuarios explorar series populares, agregar reseñas, puntuarlas y administrar su experiencia personal. El proyecto está desarrollado en PHP y utiliza una base de datos para gestionar usuarios, series y reseñas.
 
 ## Características
 
