@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ## Verificar la contraseña
             if (password_verify($clave, $usuario->getContrasena())) {
                 ## Guardar los datos del usuario en la sesión
-                $_SESSION["_tiempo"]  = time() + 30;
+                $_SESSION["_tiempo"]  = time() + 300;
                 $_SESSION["_usuario"] = serialize($usuario);
 
                 ## Redirigir a la página principal
@@ -61,6 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 
     <div class="login-container">
+
         <div class="login-box">
             <h1>Bienvenido a Pixela | Inicio de Usuario</h1>
             <form method="POST">
@@ -88,8 +89,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="logo">
             <img src="./assets/img/logo_pixela.png" alt="Pixela.io Logo">
         </div>
-        <p class="register-message">
-            Registrate si aun no lo has hecho - <a href="registro.php">Registrar</a>
+
+        <p class="register-message"> Registrate si aun no lo has hecho - <a href="registro.php">Registrar</a>
         </p>
 
 

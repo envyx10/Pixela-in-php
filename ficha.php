@@ -1,10 +1,14 @@
 <?php
+
 session_start();
 
 require_once 'clases/Api.php';
 require_once 'clases/Ficha.php';
 require_once 'clases/Review.php';
 require_once 'clases/Usuario.php';
+
+include_once './inc/session.php';  
+
 
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     echo "<p>Serie no especificada.</p>";

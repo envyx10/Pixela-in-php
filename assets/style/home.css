@@ -8,6 +8,9 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 header {
   position: fixed; 

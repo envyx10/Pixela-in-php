@@ -3,7 +3,8 @@
 session_start();
 
 require_once 'clases/Review.php'; 
-require_once 'clases/Usuario.php'; 
+require_once 'clases/Usuario.php';  
+include_once './inc/session.php';  
 
 ## Verificamos si el usuario está logueado
 if (!isset($_SESSION['_usuario'])) {

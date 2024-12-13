@@ -5,6 +5,8 @@ session_start();
 if (!empty($_SESSION)):
     include_once "./inc/session.php";
 endif;
+
+
 ?>
 
 <!DOCTYPE html>
@@ -69,8 +71,7 @@ endif;
             <div class="carousel-track">
                 <?php
                 foreach ($series_combinadas as $serie):
-                    $posterPath = isset($serie['poster_path']) && $serie['poster_path'] 
-                        ? $serie['poster_path'] 
+                    $posterPath = isset($serie['poster_path']) && $serie['poster_path'] ? $serie['poster_path'] 
                         : "assets/img/placeholder.png";
                     $title = htmlspecialchars($serie['name'], ENT_QUOTES, 'UTF-8');
                     $serieId = $serie['id'];

@@ -14,7 +14,6 @@ if (isset($_SESSION['_usuario'])) {
         <h1>Pixela.io</h1>
     </div>
 
-
     <nav>
         <ul class="menu">
             <li><a href="#shogun">Inicio</a></li>
@@ -23,9 +22,11 @@ if (isset($_SESSION['_usuario'])) {
     </nav>
 
     <div class="session">
-        <a href="<?php echo isset($_SESSION['_usuario']) ? '#' : 'index.php'; ?>">
-            <?php echo isset($_SESSION['_usuario']) ? htmlspecialchars($usuario) : 'Iniciar sesión'; ?>
+        
+        <a href="<?= isset($_SESSION['_usuario']) ? '#' : 'index.php'; ?>">
+            <?= isset($_SESSION['_usuario']) ? $usuario  . " <a href=\"./inc/logout.php\">cerrar session</a>" : 'Iniciar sesión'; ?>
         </a>
-    </div>
 
+    </div>
+ 
 </header>
