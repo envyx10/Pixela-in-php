@@ -58,8 +58,3 @@ El proyecto consta de los siguientes archivos principales:
 - **Base de Datos:** MySQL configurada.
 - **Composer:** Para gestionar dependencias.
 
-## Instalación y Configuración
-
-1. **Clona este repositorio:**
-   ```bash
-   git clone https://github.com/tuusuario/pixela.git
