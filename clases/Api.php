@@ -11,7 +11,7 @@ class Api {
     private const DEFAULT_TIME = 'week';
 
     public function __construct(){
-        $this->api_key = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2ZjE0ZmQ1OGEwYTViZGY0ZjYyZmJkYzE3NTg5NmEwNSIsIm5iZiI6MTczMjc5MDU4MC4yMDUzMjkyLCJzdWIiOiI2NzJmYzc2YmFjOTcwYWFkMmE4ZDgzYjEiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.qB6rJ1nbhwpD5b5DeDavCFYaXB3SZ7_mJqQindHG670';
+        $this->api_key = '### la mantengo privada ###';
     }
 
     /**
